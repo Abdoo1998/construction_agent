@@ -1,0 +1,35 @@
+# Core packages
+langchain
+langchain-community
+langchain-core
+langchain-openai
+langchain-ollama
+langchain-huggingface
+langchain-chroma
+langchain-text-splitters
+
+# Vector DB
+chromadb
+
+# Embeddings and LLMs
+sentence-transformers
+transformers
+torch
+accelerate
+
+# PDF processing
+pymupdf
+
+# Utilities
+python-dotenv
+numpy
+faiss-cpu
+tiktoken
+pydantic>=2.0.0
+
+# Use Pydantic v1 for compatibility
+typing-extensions
+
+# API (if needed)
+fastapi
+uvicorn
