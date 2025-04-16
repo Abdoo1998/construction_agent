@@ -6,6 +6,8 @@ from typing import List, Dict, Any, Optional, Union
 import os
 
 from langchain_community.document_loaders import PyMuPDFLoader
+from langchain_community.document_loaders.parsers import RapidOCRBlobParser
+
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_core.documents import Document
 
@@ -46,7 +48,8 @@ class DocumentProcessor:
         Returns:
             List of loaded document pages.
         """
-        loader = PyMuPDFLoader(str(file_path))
+        loader = PyMuPDFLoader(file_path=str(file_path),
+    extract_tables="markdown")
         return loader.load()
     
     def load_documents_from_directory(self) -> List[Document]:
